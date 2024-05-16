@@ -1,0 +1,4 @@
+export ANDROID_SDK_ROOT="/home/$(whoami)/Android"
+export ANDROID_HOME="$ANDROID_SDK_ROOT"
+export PATH="$PATH:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"

@@ -1,0 +1,11 @@
+function search_code_in_commit_history() {
+    git log -S $1 --source --all
+}
+
+function perplexity() {
+    echo "$1"; date; ~/anaconda3/envs/perplexity/bin/python ~/code/perplexity-ai-toolkit/cli.py --search --query "$1" | tee -a ~/logs/perplexity.log
+}
+
+function open_pull_request() {
+    alias gpu_kids="git rev-parse --abbrev-ref HEAD | xargs -I{} git push -u origin {} && sleep 3 && git rev-parse --abbrev-ref HEAD | xargs -I % wsl-open https://github.com/$1/$2/compare/main...%"
+}

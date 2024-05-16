@@ -1,0 +1,9 @@
+alias gp='git push'
+
+alias gcm='git pull --quiet && git branch --merged | grep -v master | xargs git branch -d 2> /dev/null'
+
+alias gpu_sofa='open_pull_request $WORK_REPOSITORY $PROJECT_1'
+alias gpu_kids='open_pull_request $WORK_REPOSITORY $PROJECT_2'
+alias gpu_kids_android='open_pull_request $WORK_REPOSITORY $PROJECT_3'
+
+alias ghistory="search_code_in_commit_history"

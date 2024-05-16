@@ -1,0 +1,3 @@
+alias v='vi'
+alias vo='git diff --name-only | xargs -o vi'
+alias vc="git diff --name-only main | xargs -o $EDITOR"

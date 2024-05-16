@@ -1,0 +1,8 @@
+export FZF_TMUX_URLS="$SHORTCUT_WORK_TEAM_URL
+https://calendar.google.com
+https://github.com/$WORK_REPOSITORY/$PROJECT_2/pulls
+https://github.com
+$HEROKU_PIPELINES_URL
+https://mail.google.com/mail/u/0/#inbox
+https://www.perplexity.ai"
+echo $FZF_TMUX_URLS
