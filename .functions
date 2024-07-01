@@ -10,5 +10,5 @@ function perplexity() {
 }
 
 function open_pull_request() {
-    alias gpu_kids="git rev-parse --abbrev-ref HEAD | xargs -I{} git push -u origin {} && sleep 3 && git rev-parse --abbrev-ref HEAD | xargs -I % wsl-open https://github.com/$1/$2/compare/main...%"
+    git rev-parse --abbrev-ref HEAD | xargs -I{} git push -u origin {} && sleep 3 && git rev-parse --abbrev-ref HEAD | xargs -I % wsl-open https://github.com/$1/$2/compare/main...%
 }
