@@ -1,6 +1,6 @@
 alias docker_desktop='/mnt/c/Program\ Files/Docker/Docker/frontend/Docker\ Desktop.exe'
 alias file_explorer='/mnt/c/Windows/explorer.exe'
-alias firefox='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
+alias browser='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 alias keepassxc='/mnt/c/Program\ Files/KeePassXC/KeePassXC.exe'
 alias slack="/mnt/c/Users/$WINDOWS_USER_NAME/AppData/Local/slack/slack.exe"
 alias vcxsrv='/mnt/c/Program\ Files/VcXsrv/xlaunch.exe'
