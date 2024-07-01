@@ -3,7 +3,10 @@ function search_code_in_commit_history() {
 }
 
 function perplexity() {
-    echo "$1"; date; ~/anaconda3/envs/perplexity/bin/python ~/code/perplexity-ai-toolkit/cli.py --search --query "$1" | tee -a ~/logs/perplexity.log
+    echo -e "\n$1\n" >> ~/logs/perplexity.log
+    date >> ~/logs/perplexity.log
+    echo -e '\n' >> ~/logs/perplexity.log
+    ~/anaconda3/envs/perplexity/bin/python ~/code/perplexity-ai-toolkit/cli.py --search --query "$1" | awk '/Assistant:/, 0' | tee -a ~/logs/perplexity.log
 }
 
 function open_pull_request() {
