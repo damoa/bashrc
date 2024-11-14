@@ -2,13 +2,6 @@ function search_code_in_commit_history() {
     git log -S $1 --source --all
 }
 
-function perplexity() {
-    echo -e "\n$1\n" >> ~/logs/perplexity.log
-    date >> ~/logs/perplexity.log
-    echo -e '\n' >> ~/logs/perplexity.log
-    ~/venvs/perplexity/bin/python ~/code/perplexity-ai-toolkit/cli.py --search --query "$1" | awk '/Assistant:/, 0' | tee -a ~/logs/perplexity.log
-}
-
 function open_pull_request() {
     git rev-parse --abbrev-ref HEAD | xargs -I{} git push -u origin {} && sleep 3 && git rev-parse --abbrev-ref HEAD | xargs -I % wsl-open https://github.com/$1/$2/compare/main...%
 }
