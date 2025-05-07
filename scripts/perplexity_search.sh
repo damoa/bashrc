@@ -12,6 +12,26 @@ echo $*
 echo ''
 
 # Compose the JSON payload
+
+# Available models:
+#
+## Search models
+#
+# sonar: A lightweight, cost-effective search model optimized for quick, grounded answers with real-time web search.
+#
+# sonar-pro: An advanced search model designed for complex queries, delivering deeper content understanding with enhanced citation accuracy.
+#
+## Research models
+#
+# sonar-deep-search: A powerful research model capable of conducting exhaustive searches, synthesizing expert-level insights, and generating detailed reports.
+#
+## Reasoning models
+#
+# sonar-reasoning: A reasoning-focused model that applies Chain-of-Thought (CoT) reasoning for quick problem-solving and structured analysis.
+#
+# sonar-reasoning-pro:
+# A high-performance reasoning model leveraging advanced multi-step CoT reasoning and enhanced information retrieval.
+
 json_request=$(jq -n \
   --arg content "$*" \
   '{
