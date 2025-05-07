@@ -1,1 +1,1 @@
-sudo apt install direnv jq
+sudo apt install curl direnv jq
