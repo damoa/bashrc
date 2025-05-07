@@ -12,9 +12,10 @@ fi
 
 echo "Installing llm with openai setup"
 if command -v llm >/dev/null 2>&1; then
-  "llm and llm-cmd already installed!"
+  echo "llm and llm-cmd already installed!"
 else
   pip install llm
+  echo 'Set up openAI'
   llm keys set openai
   llm install llm-cmd
 fi
