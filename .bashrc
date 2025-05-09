@@ -6,5 +6,6 @@ source ~/bashrc/.env_variables
 source ~/bashrc/.functions
 source ~/bashrc/.general_aliases
 source ~/bashrc/.git_aliases
+source ~/bashrc/.python_base
 source ~/bashrc/.urls
 source ~/bashrc/.winprograms
