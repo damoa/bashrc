@@ -11,6 +11,14 @@ echo 'input:'
 echo $*
 echo ''
 
+current_datetime=$(date +"%Y-%m-%d_%H-%M-%S")
+directory=~/Documents/llm_queries
+mkdir -p $directory
+filename="${directory}/search_query_${current_datetime}.txt"
+
+echo "$1" >> $filename
+echo '' >> $filename
+
 # Compose the JSON payload
 
 # Available models:
@@ -88,6 +96,8 @@ content=$(echo "$json_response" | jq -r '.choices[].message.content')
 citations=$(echo "$json_response" | jq -r '.citations')
 total_tokens=$(echo "$json_response" | jq -r '.usage.total_tokens')
 
+echo "$content" >> $filename
+
 echo 'content:'
 echo $content
 echo ''
@@ -99,3 +109,5 @@ echo $total_tokens
 echo ''
 echo 'model:'
 echo $model
+
+less $filename | sed 's/\\//g' | batcat --language markdown

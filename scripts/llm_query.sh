@@ -7,7 +7,9 @@ filename="${directory}/query_${current_datetime}.txt"
 
 echo $1
 llm_query() {
-  llm "$1" > $filename
+  echo "$1" >> $filename
+  echo ''
+  llm "$1" >> $filename
   echo "created file: $filename"
   less $filename | sed 's/\\//g' | batcat --language markdown
 }
