@@ -1,4 +1,4 @@
-sudo apt install curl direnv jq
+sudo apt install bat curl direnv jq
 
 if command -v python >/dev/null 2>&1; then
   echo "zoxide is already installed"
