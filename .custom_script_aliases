@@ -1,2 +1,3 @@
 alias query=~/bashrc/scripts/llm_query.sh
 alias search_query=~/bashrc/scripts/perplexity_search.sh
+alias show=~/bashrc/scripts/show_file.sh
