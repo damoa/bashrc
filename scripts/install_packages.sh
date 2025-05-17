@@ -1,4 +1,4 @@
-sudo apt install bat curl direnv jq
+sudo apt install bat curl direnv jq xmlstarlet
 
 if command -v python >/dev/null 2>&1; then
   echo "zoxide is already installed"
