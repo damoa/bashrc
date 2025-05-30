@@ -6,7 +6,7 @@ else
   curl -fsSL https://ollama.com/install.sh | sh
 fi
 
-ollama serve phi3
+ollama serve
 
 # echo 'Installing phi3....'
 # # phi-3 requires 1.5GB
