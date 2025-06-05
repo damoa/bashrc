@@ -11,3 +11,10 @@ if command -v svgo >/dev/null 2>&1; then
 else
   npm install -g svgo
 fi
+
+# usage: readability <file/url> | w3m -T text/html
+if command -v readable >/dev/null 2>&1; then
+  echo 'readability-cli is already installed'
+else
+  npm install -g readability-cli
+fi
