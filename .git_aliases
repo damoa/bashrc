@@ -7,3 +7,5 @@ alias gpu_kids='open_pull_request $WORK_REPOSITORY $PROJECT_2'
 alias gpu_kids_android='open_pull_request $WORK_REPOSITORY $PROJECT_3'
 
 alias ghistory="search_code_in_commit_history"
+
+alias pr_diff="git diff origin/main...HEAD -- ':(exclude)**/package-lock.json' ':(exclude)**/vcr/*.json' > tmp/pr-$(gh pr view --json number --jq '.number').diff"
