@@ -2,3 +2,9 @@ export ANDROID_SDK_ROOT="/home/$(whoami)/android-sdk"
 export ANDROID_HOME="$ANDROID_SDK_ROOT"
 export PATH="$PATH:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin"
 export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+
+# export ADB_SERVER_SOCKET=tcp:$(wsl2_localhost):5037
+
+if command -v /mnt/c/Android/platform-tools/adbp.exe >/dev/null 2>&1; then
+  alias adb='/mnt/c/Android/platform-tools/adb.exe'
+fi
