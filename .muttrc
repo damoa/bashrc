@@ -1,0 +1,18 @@
+set ssl_starttls=yes
+set ssl_force_tls=yes
+
+set from = "foobar@posteo.de"
+set realname = "My Name"
+set imap_user = "foobar@posteo.de"
+set imap_pass = "password"
+set folder = "imaps://posteo.de:993"
+set spoolfile = "imaps://posteo.de/INBOX"
+set postponed ="Drafts"
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+set smtp_url = "smtps://foobar@posteo.de@posteo.de:465/"
+set smtp_pass = "password"
+set move = no
+set imap_keepalive = 900
+set editor = "vim"
