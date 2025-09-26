@@ -1,0 +1,15 @@
+# On internet connectivity failure:
+
+ping -c 4 google.com
+
+# if no replies list available network interfaces:
+
+ifconfig
+
+# restart networ interface:
+
+# wired
+sudo ifdown eth0 && sudo ifup eth0
+
+# wireless
+sudo ifdown wlan0 && sudo ifup wlan0
