@@ -17,6 +17,13 @@ fi
 if command -v rg >/dev/null 2>&1; then
   echo "ripgrep is already installed"
 else
-  curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
-  sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+  arch=$(uname -m)
+
+  if [ "$arch" = "armv7l" ]; then
+    curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_armv7.deb
+    sudo dpkg -i ripgrep_14.1.0-1_armv7.deb
+  else
+    curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+    sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+  fi
 fi
